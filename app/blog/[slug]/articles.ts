@@ -19,8 +19,8 @@ export const articlesData: Record<string, Article> = {
   post1: {
     title:
       'مراقبت‌های ضروری بعد از فیبروز ابرو که ماندگاری آن را ۲ برابر می‌کند',
-    date: '۱ تیر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱ تیر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1000.webp',
     sections: [
       {
@@ -58,8 +58,8 @@ export const articlesData: Record<string, Article> = {
   post2: {
     title:
       'تفاوت میکروبلیدینگ و میکروپیگمنتیشن: کدام روش برای شما معجزه می‌کند؟',
-    date: '۸ تیر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۸ تیر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1001.webp',
     hasTable: true,
     sections: [
@@ -174,8 +174,8 @@ export const articlesData: Record<string, Article> = {
   post3: {
     title:
       'آیا خط چشم دائم درد دارد؟ پاسخ به تمام نگرانی‌ها و شایعات نگران‌کننده',
-    date: '۱۵ تیر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۵ تیر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1002.webp',
     sections: [
       {
@@ -226,8 +226,8 @@ export const articlesData: Record<string, Article> = {
   },
   post4: {
     title: 'راهنمای کامل و جامع آرایش دائم: هرآنچه قبل از انجام باید بدانید',
-    date: '۲۰ تیر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۰ تیر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1003.webp',
     sections: [
       {
@@ -274,8 +274,8 @@ export const articlesData: Record<string, Article> = {
   },
   post5: {
     title: 'کاشت ابرو بهتر است یا میکروبلیدینگ؟ (مقایسه تخصصی و نهایی سال)',
-    date: '۲۵ تیر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۵ تیر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/111.webp',
     hasTable: true,
     sections: [
@@ -317,8 +317,8 @@ export const articlesData: Record<string, Article> = {
   },
   post6: {
     title: 'میکروپیگمنتیشن لب: راز داشتن لب‌های خوش‌رنگ و بی‌نقص بدون رژ لب',
-    date: '۲ مرداد ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲ مرداد ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/137.webp',
     sections: [
       {
@@ -339,8 +339,8 @@ export const articlesData: Record<string, Article> = {
   },
   post7: {
     title: 'هزینه آرایش دائم چقدر است؟ فاکتورهای پنهان در تعیین قیمت',
-    date: '۱۰ مرداد ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۰ مرداد ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/138.webp',
     sections: [
       {
@@ -366,8 +366,8 @@ export const articlesData: Record<string, Article> = {
   post8: {
     title:
       'عوارض میکروبلیدینگ و راه‌های پیشگیری از آن: با آگاهی کامل انتخاب کنید',
-    date: '۱۸ مرداد ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۸ مرداد ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/140.webp',
     sections: [
       {
@@ -393,8 +393,8 @@ export const articlesData: Record<string, Article> = {
   post9: {
     title:
       'مراقبت‌های قبل از میکروبلیدینگ: اقداماتی که تضمین‌کننده خروجی عالی هستند',
-    date: '۲۵ مرداد ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۵ مرداد ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/126.webp',
     sections: [
       {
@@ -417,8 +417,8 @@ export const articlesData: Record<string, Article> = {
   },
   post10: {
     title: 'آیا آرایش دائم برای خانم‌های باردار و شیرده مجاز است؟ بررسی علمی',
-    date: '۲ شهریور ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲ شهریور ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/152.webp',
     sections: [
       {
@@ -441,8 +441,8 @@ export const articlesData: Record<string, Article> = {
   },
   post11: {
     title: 'ماندگاری میکروبلیدینگ چقدر است و چگونه آن را افزایش دهیم؟',
-    date: '۱۰ شهریور ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۰ شهریور ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1000.webp',
     sections: [
       {
@@ -467,8 +467,8 @@ export const articlesData: Record<string, Article> = {
   },
   post12: {
     title: 'میکروپیگمنتیشن اسکالپ سر: راه‌حل قطعی برای کم‌پشتی و طاسی موها',
-    date: '۱۸ شهریور ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۸ شهریور ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/137.webp',
     sections: [
       {
@@ -492,8 +492,8 @@ export const articlesData: Record<string, Article> = {
   post13: {
     title:
       'ریموو تاتو ابرو و خط چشم: روش‌های امن و بدون عوارض برای پاک کردن آرایش دائم',
-    date: '۲۶ شهریور ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۶ شهریور ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/152.webp',
     sections: [
       {
@@ -525,8 +525,8 @@ export const articlesData: Record<string, Article> = {
   post14: {
     title:
       'آیا می‌توان تاتوی قدیمی و دودی ابرو را بدون ریموو اصلاح و کاور کرد؟',
-    date: '۵ مهر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۵ مهر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/rimove.webp',
     sections: [
       {
@@ -547,8 +547,8 @@ export const articlesData: Record<string, Article> = {
   },
   post15: {
     title: 'بن مژه چیست و چه تفاوتی با خط چشم دائمی دارد؟ (راهنمای انتخاب)',
-    date: '۱۲ مهر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۱۲ مهر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/139.webp',
     sections: [
       {
@@ -571,8 +571,8 @@ export const articlesData: Record<string, Article> = {
   },
   post16: {
     title: 'شیدینگ لب چیست؟ همه‌چیز درباره فوتو شاپ دائم لب‌ها',
-    date: '۲۰ مهر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۰ مهر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/abroo-1003.webp',
     sections: [
       {
@@ -595,8 +595,8 @@ export const articlesData: Record<string, Article> = {
   },
   post17: {
     title: 'میکروشیدینگ ابرو: تلفیق هنر دستی و دیجیتال برای ابروهای کم‌پشت',
-    date: '۲۸ مهر ۱۴۰۵',
-    author: 'فاطمه درویشی',
+    date: '۲۸ مهر ۱۴۰۳',
+    author: 'م. اشرفی',
     img: '/optimized/images/blog/post17.webp',
     sections: [
       {

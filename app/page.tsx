@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'خانه | فاطمه درویشی - آرایش دائم در مشهد',
+  title: 'خانه | فاطمه درویشی مشهد - آرایش دائم در مشهد',
   description:
     'خدمات تخصصی آرایش دائم، فیبروز ابرو، خط چشم و رژ لب دائم در مشهد با کیفیت بالا و محیط کاملاً استریل.',
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'مشهد',
   ],
   openGraph: {
-    title: 'آرایش دائم فاطمه درویشی | میکروبلیدینگ، فیبروز و رژ لب دائم',
+    title: 'آرایش دائم فاطمه درویشی مشهد | میکروبلیدینگ، فیبروز و رژ لب دائم',
     description:
       'خدمات آرایش دائم و زیبایی در مشهد با تخصص بالا و نمونه‌کارهای واقعی.',
     type: 'website',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://fatemedarvishi.ir/optimized/abroo-1000.webp',
-        alt: 'نمونه کار فیبروز ابرو توسط فاطمه درویشی',
+        alt: 'نمونه کار فیبروز ابرو توسط فاطمه درویشی مشهد',
       },
     ],
   },
@@ -40,7 +40,11 @@ export default function HomePage() {
     },
     { src: '/optimized/abroo-1002.webp', alt: 'نمونه کار آرایش دائم ابرو' },
     { src: '/optimized/abroo-1003.webp', alt: 'نمونه کار کانتور ابرو نچرال' },
-    { src: '/optimized/me.webp', alt: 'مرکز زیبایی فاطمه درویشی' },
+    { src: '/optimized/abroo-1001.webp', alt: 'مرکز زیبایی فاطمه درویشی مشهد' },
+    { src: '/optimized/1004.webp', alt: 'نمونه کار آرایش دائم ابرو در مشهد' },
+    { src: '/optimized/1005.webp', alt: 'مرکز زیبایی فاطمه درویشی مشهد' },
+    { src: '/optimized/1006.webp', alt: 'نمونه کار آرایش دائم ابرو در مشهد' },
+    { src: '/optimized/1008.webp', alt: 'مرکز زیبایی فاطمه درویشی مشهد' },
     { src: '/optimized/nemooneh.webp', alt: 'مقایسه قبل و بعد فیبروز ابرو' },
   ]
 
@@ -59,7 +63,7 @@ export default function HomePage() {
             آرایش دائم و فیبروز ابرو در مشهد
           </h1>
           <p className='text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 font-light'>
-            با خدمات تخصصی زیبایی فاطمه درویشی، زیبایی طبیعی و ماندگار را به
+            با خدمات تخصصی زیبایی فاطمه درویشی مشهد، زیبایی طبیعی و ماندگار را به
             چهره خود هدیه دهید.
           </p>
           <a
