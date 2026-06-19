@@ -21,6 +21,7 @@ export default function AboutCanvas() {
     }
 
     const resize = () => {
+      if (!canvas) return
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
       mouse.radius = (canvas.height / 120) * (canvas.width / 120)
@@ -79,6 +80,7 @@ export default function AboutCanvas() {
     }
 
     function init() {
+      if (!canvas) return // بررسی ایمنی برای تایپ‌اسکریپت
       particlesArray = []
       const numberOfParticles = (canvas.height * canvas.width) / 9000
       for (let i = 0; i < numberOfParticles; i++) {
@@ -97,7 +99,7 @@ export default function AboutCanvas() {
     }
 
     function connect() {
-      if (!ctx) return
+      if (!ctx || !canvas) return // بررسی ایمنی برای تایپ‌اسکریپت
       let opacityValue = 1
       for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
@@ -121,7 +123,7 @@ export default function AboutCanvas() {
     function animate() {
       animationFrameId = requestAnimationFrame(animate)
       if (!ctx || !canvas) return
-      ctx.clearRect(0, 0, innerWidth, innerHeight)
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
       for (let i = 0; i < particlesArray.length; i++) particlesArray[i].update()
       connect()
     }
