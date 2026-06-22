@@ -20,7 +20,7 @@ const vazirmatn = Vazirmatn({
 const navLinks = [
   { href: '/', label: 'خانه' },
   { href: '/services', label: 'خدمات' },
-  { href: '/#gallery', label: 'نمونه‌کارها' },
+  { href: '/portfolio', label: 'نمونه‌کارها' },
   { href: '/about-us', label: 'درباره من' },
   { href: '/blog', label: 'وبلاگ' },
   { href: '/contact-us', label: 'تماس با من' },
