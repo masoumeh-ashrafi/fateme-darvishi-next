@@ -1,317 +1,455 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
+
+const siteUrl = 'https://fatemedarvishi.ir'
+const phoneNumber = '09391813879'
+const phoneHref = '+989391813879'
+const emailAddress = 'FatemeDarvishi71@gmail.com'
+const address =
+  'مشهد، بزرگراه پیامبراعظم، پیامبر اعظم ۱۰۱، توس ۱۶۰، مرکز زیبایی فاطمه درویشی'
 
 export const metadata: Metadata = {
-  title: 'تماس با من | فاطمه درویشی - رزرو وقت در مشهد',
+  title: 'تماس و رزرو وقت آرایش دائم در مشهد | فاطمه درویشی',
   description:
-    'فرم تماس و آدرس مرکز زیبایی فاطمه درویشی. رزرو وقت، مشاوره و سوالات خود را سریع ارسال کنید.',
+    'تماس با مرکز زیبایی فاطمه درویشی در مشهد برای رزرو وقت و مشاوره خدمات آرایش دائم، فیبروز ابرو، میکروبلیدینگ، بن مژه، خط چشم دائم و رژ لب دائم.',
   keywords: [
-    'تماس با ما',
-    'رزرو وقت',
-    'مرکز زیبایی مشهد',
-    'مشاوره آرایش دائم',
-    'آدرس سالن مشهد',
+    'تماس فاطمه درویشی',
+    'رزرو آرایش دائم در مشهد',
+    'رزرو فیبروز ابرو مشهد',
+    'مشاوره میکروبلیدینگ مشهد',
+    'آدرس مرکز زیبایی فاطمه درویشی',
+    'مرکز آرایش دائم در مشهد',
   ],
+  alternates: {
+    canonical: `${siteUrl}/contact-us`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: 'تماس با مرکز زیبایی فاطمه درویشی | رزرو وقت و مشاوره',
+    title: 'تماس و رزرو وقت | مرکز زیبایی فاطمه درویشی',
     description:
-      'برای رزرو وقت یا دریافت مشاوره در زمینه آرایش دائم، فیبروز و میکروبلیدینگ از طریق فرم تماس اقدام کنید.',
+      'برای رزرو وقت، مشاوره و پرسش درباره خدمات آرایش دائم در مشهد با فاطمه درویشی در ارتباط باشید.',
     type: 'website',
-    url: 'https://fatemedarvishi.ir/contact-us',
+    locale: 'fa_IR',
+    url: `${siteUrl}/contact-us`,
+    siteName: 'فاطمه درویشی',
+    images: [
+      {
+        url: `${siteUrl}/optimized/header-bg.webp`,
+        width: 1200,
+        height: 630,
+        alt: 'تماس با مرکز زیبایی فاطمه درویشی در مشهد',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'تماس و رزرو وقت | فاطمه درویشی',
+    description:
+      'رزرو وقت و مشاوره برای خدمات آرایش دائم، فیبروز ابرو، بن مژه و رژ لب دائم در مشهد.',
+    images: [`${siteUrl}/optimized/header-bg.webp`],
   },
 }
 
+const contactItems = [
+  {
+    title: 'آدرس مرکز',
+    value: address,
+    href: 'https://www.google.com/maps/search/?api=1&query=%D9%85%D8%B4%D9%87%D8%AF%20%D8%A8%D8%B2%D8%B1%DA%AF%D8%B1%D8%A7%D9%87%20%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1%D8%A7%D8%B9%D8%B8%D9%85%20%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1%20%D8%A7%D8%B9%D8%B8%D9%85%20101%20%D8%AA%D9%88%D8%B3%20160',
+    linkLabel: 'مشاهده مسیر روی نقشه',
+  },
+  {
+    title: 'شماره تماس',
+    value: phoneNumber,
+    href: `tel:${phoneHref}`,
+    linkLabel: 'تماس مستقیم',
+  },
+  {
+    title: 'ایمیل',
+    value: emailAddress,
+    href: `mailto:${emailAddress}`,
+    linkLabel: 'ارسال ایمیل',
+  },
+  {
+    title: 'ساعات کاری',
+    value: 'شنبه تا پنجشنبه: ۱۰ صبح تا ۷ شب | جمعه‌ها: با تعیین وقت قبلی',
+    href: '/contact-us#booking-form',
+    linkLabel: 'درخواست رزرو',
+  },
+]
+
+const faqItems = [
+  {
+    question: 'برای رزرو وقت چه اطلاعاتی لازم است؟',
+    answer:
+      'نام، شماره تماس، نوع خدمت مورد نظر و در صورت وجود، سابقه تاتو یا خدمات قبلی را ارسال کنید. برای خدمات ابرو، چشم یا لب، عکس واضح از ناحیه مورد نظر می‌تواند به مشاوره دقیق‌تر کمک کند.',
+  },
+  {
+    question: 'آیا قبل از انجام آرایش دائم مشاوره لازم است؟',
+    answer:
+      'بله. نوع پوست، فرم صورت، سابقه تاتو قبلی، حساسیت‌ها، مصرف دارو و انتظار شما از نتیجه باید قبل از شروع کار بررسی شود.',
+  },
+  {
+    question: 'آیا می‌توانم فقط برای پرسیدن سوال پیام بدهم؟',
+    answer:
+      'بله. می‌توانید از طریق فرم تماس، تماس تلفنی یا ایمیل سوال خود را ارسال کنید. پاسخ نهایی درباره امکان انجام خدمت، بعد از بررسی شرایط شما دقیق‌تر خواهد بود.',
+  },
+]
+
 export default function ContactPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['BeautySalon', 'LocalBusiness'],
+        '@id': `${siteUrl}/#beautysalon`,
+        name: 'مرکز زیبایی فاطمه درویشی',
+        url: siteUrl,
+        image: `${siteUrl}/optimized/header-bg.webp`,
+        description:
+          'مرکز تخصصی آرایش دائم، فیبروز ابرو، میکروبلیدینگ، بن مژه، خط چشم دائم و رژ لب دائم در مشهد.',
+        telephone: phoneHref,
+        email: emailAddress,
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress:
+            'بزرگراه پیامبراعظم، پیامبر اعظم ۱۰۱، توس ۱۶۰',
+          addressLocality: 'مشهد',
+          addressRegion: 'خراسان رضوی',
+          addressCountry: 'IR',
+        },
+        areaServed: {
+          '@type': 'City',
+          name: 'مشهد',
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Saturday',
+              'Sunday',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+            ],
+            opens: '10:00',
+            closes: '19:00',
+          },
+        ],
+      },
+      {
+        '@type': 'ContactPage',
+        '@id': `${siteUrl}/contact-us#webpage`,
+        url: `${siteUrl}/contact-us`,
+        name: 'تماس و رزرو وقت آرایش دائم در مشهد',
+        description:
+          'صفحه تماس فاطمه درویشی برای رزرو وقت، مشاوره و پرسش درباره خدمات آرایش دائم در مشهد.',
+        inLanguage: 'fa-IR',
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
+        },
+        about: {
+          '@id': `${siteUrl}/#beautysalon`,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/contact-us#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'خانه',
+            item: siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'تماس و رزرو',
+            item: `${siteUrl}/contact-us`,
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${siteUrl}/contact-us#faq`,
+        mainEntity: faqItems.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      },
+    ],
+  }
+
   return (
-    <div className='w-full' dir='rtl'>
-      <div className='animated-background' aria-hidden />
+    <div className='w-full bg-gray-50' dir='rtl'>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
 
       <section
-        className='hero-contact-bg text-white py-20 md:py-32 text-center shadow-lg mx-4 mt-4 rounded-b-lg'
+        className='relative overflow-hidden bg-cover bg-center text-white'
         style={{ backgroundImage: "url('/header-bg.webp')" }}
       >
-        <div className='container mx-auto px-4 relative z-10'>
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-4 leading-tight'>
-            با ما در تماس باشید
-          </h2>
-          <p className='text-lg md:text-xl max-w-3xl mx-auto opacity-90'>
-            مشاوره رایگان بگیرید، سوالات خود را بپرسید یا وقت رزرو کنید.
+        <div className='absolute inset-0 bg-black/65' />
+
+        <div className='container relative z-10 mx-auto px-4 py-20 text-center md:py-28'>
+          <p className='mb-4 inline-block rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur'>
+            رزرو وقت و مشاوره در مشهد
           </p>
+
+          <h1 className='mb-5 text-3xl font-black leading-tight md:text-5xl'>
+            تماس با مرکز زیبایی فاطمه درویشی
+          </h1>
+
+          <p className='mx-auto max-w-3xl text-base leading-8 opacity-95 md:text-lg'>
+            برای رزرو وقت، مشاوره درباره خدمات آرایش دائم، بررسی تاتو قبلی یا
+            پرسیدن سوال درباره فیبروز ابرو، بن مژه، خط چشم دائم و رژ لب دائم،
+            از راه‌های زیر با ما در ارتباط باشید.
+          </p>
+
+          <div className='mt-8 flex flex-col justify-center gap-4 sm:flex-row'>
+            <a
+              href={`tel:${phoneHref}`}
+              className='inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-bold text-emerald-800 no-underline transition duration-300 hover:bg-gray-100'
+            >
+              تماس مستقیم
+            </a>
+
+            <a
+              href='#booking-form'
+              className='inline-flex items-center justify-center rounded-full border border-white px-8 py-3 font-bold text-white no-underline transition duration-300 hover:bg-white/10'
+            >
+              تکمیل فرم رزرو
+            </a>
+          </div>
         </div>
       </section>
 
-      <main className='flex-grow container mx-auto px-4 py-16 md:py-24'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-          <div className='bg-white p-10 rounded-xl shadow-lg border border-gray-100'>
-            <h3 className='text-3xl font-bold text-gray-900 mb-8 text-center lg:text-right'>
-              اطلاعات تماس
-            </h3>
+      <section className='py-14 md:py-20'>
+        <div className='container mx-auto px-4'>
+          <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
+            <div className='rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8'>
+              <h2 className='mb-6 text-2xl font-black text-gray-950 md:text-3xl'>
+                اطلاعات تماس
+              </h2>
 
-            <div className='space-y-8'>
-              <div className='flex items-start text-gray-700'>
-                <svg
-                  className='w-8 h-8 text-emerald-700 flex-shrink-0 mt-1 ml-4'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z'
-                  ></path>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
-                  ></path>
-                </svg>
-                <div>
-                  <p className='font-semibold text-xl'>آدرس:</p>
-                  <p className='text-lg'>
-                    مشهد، بزرگراه پیامبراعظم، پیامبر اعظم ۱۰۱ ،توس ۱۶۰ ،مرکز
-                    زیبایی فاطمه درویشی
-                  </p>
-                </div>
-              </div>
-
-              <div className='flex items-start text-gray-700'>
-                <svg
-                  className='w-8 h-8 text-emerald-700 flex-shrink-0 mt-1 ml-4'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'
-                  ></path>
-                </svg>
-                <div>
-                  <p className='font-semibold text-xl'>تلفن:</p>
-                  <p className='text-lg' dir='ltr'>
-                    <a
-                      href='tel:09391813879'
-                      className='hover:underline text-emerald-700'
-                    >
-                      0939 181 3879
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className='flex items-start text-gray-700'>
-                <svg
-                  className='w-8 h-8 text-emerald-700 flex-shrink-0 mt-1 ml-4'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
-                  ></path>
-                </svg>
-                <div>
-                  <p className='font-semibold text-xl'>ایمیل:</p>
-                  <p className='text-lg'>
-                    <a
-                      href='mailto:FatemeDarvishi71@gmail.ir'
-                      className='hover:underline text-emerald-700'
-                    >
-                      FatemeDarvishi71@gmail.ir
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className='flex items-start text-gray-700'>
-                <svg
-                  className='w-8 h-8 text-emerald-700 flex-shrink-0 mt-1 ml-4'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
-                  ></path>
-                </svg>
-                <div>
-                  <p className='font-semibold text-xl'>ساعات کاری:</p>
-                  <p className='text-lg'>شنبه تا پنجشنبه: ۱۰ صبح - ۷ شب</p>
-                  <p className='text-lg'>جمعه‌ها: با تعیین وقت قبلی</p>
-                </div>
-              </div>
-
-              <div className='flex items-center justify-center lg:justify-start pt-4'>
-                <a
-                  href='#'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='text-gray-600 hover:text-emerald-700 mx-2 transition duration-300'
-                >
-                  <svg
-                    className='w-10 h-10'
-                    fill='currentColor'
-                    viewBox='0 0 24 24'
-                    aria-hidden='true'
+              <div className='space-y-4'>
+                {contactItems.map((item) => (
+                  <div
+                    key={item.title}
+                    className='rounded-2xl border border-gray-100 bg-gray-50 p-5'
                   >
-                    <path
-                      fillRule='evenodd'
-                      d='M12.315 2.404A.75.75 0 0112 2.25c-5.343 0-9.75 4.148-9.75 9.25 0 1.604.412 3.12 1.196 4.498a10.027 10.027 0 005.158 4.792c.677.269 1.49.206 2.035-.14a6.837 6.837 0 003.542-4.045c.29-.86-.542-1.754-1.48-1.57A.75.75 0 0017.3 15c.341 0 .673-.069.983-.199.414-.176.786-.41.979-.684.288-.415.54-1.127.72-2.146.126-.692.21-1.39.21-2.062 0-3.003-2.096-5.597-4.997-6.386zM8.315 11.25a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0z'
-                      clipRule='evenodd'
-                    />
-                    <path
-                      fillRule='evenodd'
-                      d='M8.315 11.25c0-.985-.453-1.895-1.25-2.527a4.5 4.5 0 00-6.364 6.364l1.768 1.768a4.502 4.502 0 006.364 0l1.768-1.768a4.5 4.5 0 000-6.364z'
-                      clipRule='evenodd'
-                    />
-                  </svg>
-                </a>
+                    <h3 className='mb-2 text-lg font-black text-gray-950'>
+                      {item.title}
+                    </h3>
+
+                    <p className='mb-3 leading-8 text-gray-700'>
+                      {item.value}
+                    </p>
+
+                    <a
+                      href={item.href}
+                      target={item.href.startsWith('http') ? '_blank' : undefined}
+                      rel={
+                        item.href.startsWith('http') ? 'noreferrer' : undefined
+                      }
+                      className='inline-flex font-bold text-emerald-700 no-underline hover:text-emerald-900'
+                    >
+                      {item.linkLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className='mt-8 rounded-2xl border border-emerald-100 bg-emerald-50 p-5'>
+                <h2 className='mb-3 text-xl font-black text-gray-950'>
+                  قبل از مراجعه حضوری
+                </h2>
+
+                <p className='leading-8 text-gray-700'>
+                  برای جلوگیری از انتظار و برای بررسی دقیق‌تر شرایط پوست، فرم
+                  صورت یا سابقه تاتو قبلی، بهتر است قبل از مراجعه حضوری از طریق
+                  فرم یا تماس تلفنی هماهنگ کنید.
+                </p>
               </div>
             </div>
-          </div>
 
-          <div className='bg-white p-10 rounded-xl shadow-lg border border-gray-100'>
-            <h3 className='text-3xl font-bold text-gray-900 mb-8 text-center lg:text-right'>
-              ارسال پیام
-            </h3>
-            <form
-              className='max-w-full mx-auto'
-              action='https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE'
-              method='POST'
+            <div
+              id='booking-form'
+              className='rounded-3xl border border-gray-100 bg-white p-6 shadow-sm md:p-8'
             >
-              <div className='mb-6'>
-                <label
-                  htmlFor='name'
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                >
-                  نام:
-                </label>
-                <input
-                  type='text'
-                  id='name'
-                  name='name'
-                  placeholder='نام کامل شما'
-                  className='w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-200 focus:border-transparent transition duration-200'
-                  required
-                />
-              </div>
-              <div className='mb-6'>
-                <label
-                  htmlFor='email'
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                >
-                  ایمیل:
-                </label>
-                <input
-                  type='email'
-                  id='email'
-                  name='email'
-                  placeholder='ایمیل شما'
-                  className='w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-200 focus:border-transparent transition duration-200'
-                  required
-                />
-              </div>
-              <div className='mb-6'>
-                <label
-                  htmlFor='phone'
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                >
-                  شماره تلفن (اختیاری):
-                </label>
-                <input
-                  type='tel'
-                  id='phone'
-                  name='phone'
-                  placeholder='شماره تلفن برای تماس'
-                  className='w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-200 focus:border-transparent transition duration-200'
-                />
-              </div>
-              <div className='mb-6'>
-                <label
-                  htmlFor='subject'
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                >
-                  موضوع:
-                </label>
-                <input
-                  type='text'
-                  id='subject'
-                  name='_subject'
-                  placeholder='موضوع پیام'
-                  className='w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-200 focus:border-transparent transition duration-200'
-                />
-              </div>
-              <div className='mb-6'>
-                <label
-                  htmlFor='message'
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                >
-                  پیام شما:
-                </label>
-                <textarea
-                  id='message'
-                  name='message'
-                  rows={6}
-                  placeholder='پیام خود را اینجا بنویسید...'
-                  className='w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-200 focus:border-transparent transition duration-200'
-                  required
-                />
-              </div>
-              <input type='hidden' name='_next' value='/thanks' />
-              <button
-                type='submit'
-                className='w-full bg-emerald-700 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-emerald-800 transition duration-300 transform hover:scale-105'
-              >
-                ارسال پیام
-              </button>
-            </form>
-          </div>
-        </div>
+              <h2 className='mb-3 text-2xl font-black text-gray-950 md:text-3xl'>
+                فرم رزرو و مشاوره
+              </h2>
 
-        <div className='mt-16 bg-white p-6 rounded-xl shadow-lg border border-gray-100'>
-          <h3 className='text-3xl font-bold text-center mb-8 text-gray-900'>
-            موقعیت ما روی نقشه
-          </h3>
-          <div
-            className='map-container overflow-hidden rounded-lg'
-            style={{ paddingBottom: '56.25%', position: 'relative', height: 0 }}
-          >
-            <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.4243884803513!2d59.57444311516104!3d36.25203368006275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f220de1b7e3f947%3A0xb3e1b7e3f947b3e1!2z2qnZiCDZh9uM2K_Ys9iq!5e0!3m2!1sen!2s!4v1678912345678!5m2!1sen!2s'
-              width='100%'
-              height='450'
-              style={{
-                border: 0,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-              }}
-              allowFullScreen
-              loading='lazy'
-              referrerPolicy='no-referrer-when-downgrade'
-            />
+              <p className='mb-8 leading-8 text-gray-600'>
+                این فرم برای ثبت درخواست اولیه است. بعد از ارسال اطلاعات، برای
+                هماهنگی زمان و بررسی جزئیات خدمت با شما تماس گرفته می‌شود.
+              </p>
+
+              <form action='https://formspree.io/f/xnnveowr' method='POST'>
+                <input
+                  type='hidden'
+                  name='_subject'
+                  value='درخواست رزرو و مشاوره از صفحه تماس سایت'
+                />
+
+                <div className='mb-5'>
+                  <label
+                    htmlFor='name'
+                    className='mb-2 block text-sm font-bold text-gray-700'
+                  >
+                    نام شما
+                  </label>
+                  <input
+                    id='name'
+                    type='text'
+                    name='name'
+                    placeholder='نام کامل'
+                    className='w-full rounded-lg border border-gray-300 p-3 text-sm transition focus:border-emerald-600 focus:outline-none'
+                    required
+                  />
+                </div>
+
+                <div className='mb-5'>
+                  <label
+                    htmlFor='phone'
+                    className='mb-2 block text-sm font-bold text-gray-700'
+                  >
+                    شماره تماس
+                  </label>
+                  <input
+                    id='phone'
+                    type='tel'
+                    name='phone'
+                    placeholder='مثلاً 09123456789'
+                    className='w-full rounded-lg border border-gray-300 p-3 text-sm transition focus:border-emerald-600 focus:outline-none'
+                    required
+                  />
+                </div>
+
+                <div className='mb-5'>
+                  <label
+                    htmlFor='email'
+                    className='mb-2 block text-sm font-bold text-gray-700'
+                  >
+                    ایمیل، اختیاری
+                  </label>
+                  <input
+                    id='email'
+                    type='email'
+                    name='email'
+                    placeholder='example@gmail.com'
+                    className='w-full rounded-lg border border-gray-300 p-3 text-sm transition focus:border-emerald-600 focus:outline-none'
+                  />
+                </div>
+
+                <div className='mb-5'>
+                  <label
+                    htmlFor='service'
+                    className='mb-2 block text-sm font-bold text-gray-700'
+                  >
+                    نوع خدمت مورد نظر
+                  </label>
+                  <select
+                    id='service'
+                    name='service'
+                    className='w-full rounded-lg border border-gray-300 bg-white p-3 text-sm transition focus:border-emerald-600 focus:outline-none'
+                    defaultValue=''
+                    required
+                  >
+                    <option value='' disabled>
+                      انتخاب کنید
+                    </option>
+                    <option value='فیبروز و میکروبلیدینگ ابرو'>
+                      فیبروز و میکروبلیدینگ ابرو
+                    </option>
+                    <option value='شیدینگ و میکروپیگمنتیشن ابرو'>
+                      شیدینگ و میکروپیگمنتیشن ابرو
+                    </option>
+                    <option value='بن مژه و خط چشم دائم'>
+                      بن مژه و خط چشم دائم
+                    </option>
+                    <option value='رژ لب دائم و کانتور لب'>
+                      رژ لب دائم و کانتور لب
+                    </option>
+                    <option value='ریموو یا اصلاح تاتو قدیمی'>
+                      ریموو یا اصلاح تاتو قدیمی
+                    </option>
+                    <option value='مشاوره قبل از انتخاب خدمت'>
+                      مشاوره قبل از انتخاب خدمت
+                    </option>
+                  </select>
+                </div>
+
+                <div className='mb-6'>
+                  <label
+                    htmlFor='message'
+                    className='mb-2 block text-sm font-bold text-gray-700'
+                  >
+                    توضیحات شما
+                  </label>
+                  <textarea
+                    id='message'
+                    name='message'
+                    rows={5}
+                    placeholder='مثلاً سابقه تاتو قبلی، نوع پوست، خدمت مدنظر یا زمان پیشنهادی خود را بنویسید.'
+                    className='w-full rounded-lg border border-gray-300 p-3 text-sm transition focus:border-emerald-600 focus:outline-none'
+                    required
+                  />
+                </div>
+
+                <button
+                  type='submit'
+                  className='w-full rounded-lg bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-emerald-800'
+                >
+                  ارسال درخواست رزرو
+                </button>
+              </form>
+            </div>
           </div>
-          <p className='text-center text-gray-600 mt-4'>
-            برای مشاهده دقیق موقعیت، روی نقشه بالا کلیک کنید.
-          </p>
         </div>
-      </main>
+      </section>
+
+      <section className='bg-white py-14'>
+        <div className='container mx-auto px-4'>
+          <div className='mx-auto max-w-4xl'>
+            <div className='mb-8 text-center'>
+              <h2 className='text-2xl font-black text-gray-950 md:text-3xl'>
+                سوالات رایج قبل از تماس
+              </h2>
+              <p className='mt-3 leading-8 text-gray-600'>
+                این موارد کمک می‌کنند درخواست مشاوره دقیق‌تر ثبت شود.
+              </p>
+            </div>
+
+            <div className='space-y-4'>
+              {faqItems.map((item) => (
+                <details
+                  key={item.question}
+                  className='rounded-2xl border border-gray-100 bg-gray-50 p-5 shadow-sm'
+                >
+                  <summary className='cursor-pointer list-none text-lg font-black text-gray-950'>
+                    {item.question}
+                  </summary>
+                  <p className='mt-4 leading-8 text-gray-600'>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
